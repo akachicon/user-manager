@@ -6,7 +6,8 @@ const { inProject } = require('../utils');
 
 module.exports = merge(prodConfig, {
   output: {
-    path: inProject('docs')
+    path: inProject('docs'),
+    publicPath: '/user-manager/'
   },
   plugins: [
     new CleanWebpackPlugin(['docs'], { root: project.basePath })
