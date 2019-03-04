@@ -1,5 +1,3 @@
-const path = require('path');
-
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
@@ -16,7 +14,7 @@ module.exports = {
   /** The name of the directory in which to emit compiled assets */
   outDir: 'dist',
   /** The base path for all projects assets (relative to the website root) */
-  publicPath: '',
+  publicPath: '/',
   /** Which tool to use to generate sourcemaps in development */
   sourceMaps: 'cheap-eval-source-map',
   /** A hash map of variables and their values to expose globally */

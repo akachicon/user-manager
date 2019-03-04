@@ -10,6 +10,7 @@
     "build:dev": "cross-env NODE_ENV=development npm run webpack:dev",
     "build:prod": "cross-env NODE_ENV=production npm run webpack:prod",
     "build:gh-pages": "cross-env NODE_ENV=production npm run webpack:gh-pages",
+    "server": "node server",
     "lint": "eslint --ext .js,.jsx src/",
     "lint:fix": "eslint --fix --ext .js,.jsx src/",
     "test": "echo \"Error: no test specified\" && exit 1"
