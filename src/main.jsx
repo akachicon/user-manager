@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configStore from './config-store';
 import App from './components/app';
-import style from './style.scss';
+import './style.scss';
 
 const store = configStore();
 
