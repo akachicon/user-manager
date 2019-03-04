@@ -1,0 +1,218 @@
+html, body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+@media screen and (max-width: 380px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@mixin regular-font {
+  font-family: sans-serif;
+  font-weight: 600;
+  color: #444;
+}
+
+@mixin regular-select {
+  @include regular-font;
+  padding: .3rem;
+  border: none;
+  border-radius: 3px;
+}
+
+@mixin regular-option {
+  @include regular-font;
+}
+
+@mixin regular-button {
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  padding: {
+    top: .3rem;
+    right: .6rem;
+    bottom: .3rem;
+    left: .6rem;
+  }
+  margin: .15rem;
+}
+
+.user-list {
+  max-width: 991px;
+  margin: {
+    top: 2rem;
+    left: auto;
+    right: auto;
+  }
+
+  &__selectors {
+    @include regular-font;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: .5rem;
+  }
+
+  &__selector-group {
+    white-space: nowrap;
+    margin-bottom: .5rem;
+  }
+
+  &__selector {
+    @include regular-select;
+    background: lightsalmon;
+    color: white;
+  }
+
+  &__selector-label {
+    display: inline-block;
+    padding: {
+      left: .5rem;
+      right: .5rem;
+    }
+  }
+
+  &__selector-option {
+    @include regular-option;
+    color: white;
+  }
+
+  &__items {
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fdfdfd;
+  }
+
+  &__fetch-message {
+    @include regular-font;
+  }
+
+  &__fetch-error {
+    @include regular-font;
+    background: #ffb8c2;
+  }
+
+  &__fetch-button {
+    @include regular-button;
+    background: cornflowerblue;
+  }
+}
+
+.user-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .3rem;
+  border-bottom: 2px solid lightgrey;
+
+  &__name {
+    @include regular-font;
+    display: block;
+    width: 30%;
+    padding-left: .5rem;
+  }
+
+  &__gender {
+    @include regular-font;
+    display: block;
+    flex-basis: 5rem;
+    text-align: center;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+
+  &__age {
+    @include regular-font;
+    display: block;
+    flex-basis: 3rem;
+    text-align: center;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 30%;
+  }
+
+  &__link {
+    @include regular-button;
+    background: cornflowerblue;
+  }
+
+  &__button {
+    @include regular-button;
+    background: red;
+  }
+}
+
+.edit-user {
+  max-width: 576px;
+  padding: 1rem;
+  margin: {
+    top: 2rem;
+    left: auto;
+    right: auto;
+  };
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  background: #fdfdfd;
+
+  &__header {
+    @include regular-font;
+  }
+
+  &__label {
+    @include regular-font;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    @include regular-font;
+    font-weight: 400;
+    width: 60%;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: {
+      top: .4rem;
+      right: .6rem;
+      bottom: .4rem;
+      left: .6rem;
+    }
+  }
+
+  &__selector {
+    @include regular-select;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background: white;
+  }
+
+  &__button {
+    @include regular-button;
+    display: block;
+    margin-left: auto;
+    background: cornflowerblue;
+  }
+}
